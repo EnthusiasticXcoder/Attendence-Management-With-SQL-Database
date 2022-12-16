@@ -50,7 +50,7 @@ class MainFrame(ctk.CTkFrame):
         NameLabel=ctk.CTkLabel(master=NameFrame,text='Student',font=('times new roman',15),text_color='black')
         NameLabel.grid(row=2,column=1,sticky='nw')
 
-        self.BottomFrame=ctk.CTkFrame(master=self)
+        self.BottomFrame=ctk.CTkFrame(master=self,fg_color=fg_color)
         self.BottomFrame.place(x=0,rely=0.163,relheight=0.840,relwidth=1)
 
         self.Menu()
@@ -68,7 +68,7 @@ class MainFrame(ctk.CTkFrame):
         self.LogoutButton.grid(row=2,column=0,padx=5)
     
     def ShowMenu(self,master) :
-        self.menuFrame.place(x=(self.Profile.winfo_rootx()-self.winfo_x())/1.25-15,y=(self.Profile.winfo_rooty()-self.winfo_y())/1.25+30)
+        self.menuFrame.place(x=(self.Profile.winfo_rootx()-self.winfo_rootx())/1.25-15,y=(self.Profile.winfo_rooty()-self.winfo_rooty())/1.25+50)
         master.bind('<Button-1>', lambda e :self.HideMenu(master=master))
 
     def HideMenu(self,master):
